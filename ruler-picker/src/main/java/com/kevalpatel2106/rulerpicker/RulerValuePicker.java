@@ -445,6 +445,7 @@ public final class RulerValuePicker extends FrameLayout implements ObservableHor
     public void setTextColorRes(@ColorRes final int color) {
         setTextColor(ContextCompat.getColor(getContext(), color));
     }
+    
 
     /**
      * @return Size of the text of ruler in dp.
@@ -456,7 +457,8 @@ public final class RulerValuePicker extends FrameLayout implements ObservableHor
     public float getTextSize() {
         return mRulerView.getTextSize();
     }
-
+    
+   
     /**
      * Set the size of the text to display on the ruler.
      *
@@ -478,6 +480,17 @@ public final class RulerValuePicker extends FrameLayout implements ObservableHor
     public void setTextSizeRes(@DimenRes final int dimension) {
         setTextSize((int) getContext().getResources().getDimension(dimension));
     }
+    
+ /**
+     * Set a user defined intervals for the long indicator
+     *
+     * @param interval value of interval, could be,1 or multiple of any numbers
+     * @see #setInterval(int)
+     */
+    public void setInterval(final int interval) {
+        mRulerView.setInterval(interval);
+    }
+
 
     /**
      * @return Color integer value of the indicator color.
