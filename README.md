@@ -47,6 +47,7 @@
 |short_height_height_ratio|Fraction|`setIndicatorHeight()`|Change the height of the short indicator. The value is between 0 to 1 where 1 indicates the height of the ruler. This value must be less than or equal to `short_height_height_ratio`.|
 |max_value|Integer|`setMinMaxValue()`|Maximum possible value to display in the ruler. This value must be greater than `min_value`.|
 |min_value|Integer|`setMinMaxValue()`|Minimum possible value to display in the ruler. This value must be greater than `max_value`.|
+|interval|Integer|`setInterval()`|user-defined interval value to divide the ruler and draw the long indicator. It could be 1 or multible of 1|
 
 - Set the initially selected value.
 ```java
