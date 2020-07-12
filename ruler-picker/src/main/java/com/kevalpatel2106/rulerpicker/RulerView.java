@@ -86,6 +86,13 @@ final class RulerView extends View {
      * @see #getMaxValue()
      */
     private int mMaxValue = 100 /* Default maximum value */;
+    
+    /**
+     *
+     * interval value. this is the default value for custom interval.
+     * @see #setInterval(int) .
+     */
+    private int mInterval = 5 /* Default value */;
 
     /**
      * Ratio of long indicator height to the ruler height. This value must be between 0 to 1. The
@@ -264,14 +271,18 @@ final class RulerView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         //Iterate through all value
-        for (int value = 1; value < mMaxValue - mMinValue; value++) {
+        int counter = 1;
+       for (int value = 0; value < (mMaxValue - mMinValue); value++) {
 
-            if (value % 5 == 0) {
-                drawLongIndicator(canvas, value);
-                drawValueText(canvas, value);
-            } else {
-                drawSmallIndicator(canvas, value);
-            }
+
+                if (counter% mInterval==0) {
+                    drawLongIndicator(canvas, value);
+                    drawValueText(canvas, value);
+                } else {
+                    drawSmallIndicator(canvas, value);
+                }
+            counter++;
+
         }
 
         //Draw the first indicator.
@@ -391,6 +402,19 @@ final class RulerView extends View {
         mTextSize = RulerViewUtils.sp2px(getContext(), textSizeSp);
         refreshPaint();
     }
+    
+     /** set the intervals on the ruler on which values will be drew.
+     *
+     * @param interval value that the canvas will use to draw value text.
+     */
+    void setInterval( final int interval){
+
+            mInterval = interval;
+
+        refreshPaint();
+
+    }
+
 
 
     /**
