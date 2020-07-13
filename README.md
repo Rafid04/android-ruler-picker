@@ -25,7 +25,8 @@ allprojects {
 
 dependency: 
     - Add the dependencye
-        ``
+       
+       ``
        	dependencies {
 	        implementation 'com.github.Rafid04:android-ruler-picker:v1.2'
 	}
