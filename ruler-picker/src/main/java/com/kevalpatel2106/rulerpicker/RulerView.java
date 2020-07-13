@@ -271,7 +271,7 @@ final class RulerView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         //Iterate through all value
-        int counter = 1;
+        int counter = 0;
        for (int value = 0; value < (mMaxValue - mMinValue); value++) {
 
 
