@@ -12,6 +12,8 @@
 ## How to use this library?
 - ### Gradle:
        Add the JitPack repository to your build file 
+       
+      
 ```
 allprojects {
 		repositories {
@@ -19,16 +21,16 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
-   ```
+  ```
 
 dependency: 
     - Add the dependencye
-        ```groovy
+        ``
        	dependencies {
 	        implementation 'com.github.Rafid04:android-ruler-picker:v1.2'
 	}
 
-        ```
+       
     - For other build systems see [Import.md](/.github/IMPORT.md).
 
 - Add `RulerValuePicker` inside your XML layout.
